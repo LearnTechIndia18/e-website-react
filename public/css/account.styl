@@ -1,0 +1,842 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.row.no-gutters-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters-0 > [class^="col-"],
+.row.no-gutters-0 > [class*=" col-"] {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+		background  $div-back-color
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	
+	.navbar
+		background transparent
+		padding 0px
+		.navbar-collapse
+			.navbar-nav
+				.nav-item
+					.nav-link
+						margin 1.3em
+						font-size 16px
+						font-weight 500
+						color $text-color-1
+						i
+							font-size 22px
+						.user
+							.main-img
+								width 40px
+								height 40px
+								overflow hidden
+								border-radius 100%
+								display inline-block
+								vertical-align middle
+								img
+									width 100%
+									height 100%
+									object-fit cover
+					.user-link
+						margin .8em 1.3em
+						
+				.active
+					.nav-link
+						color $text-color
+						font-weight 600
+						i
+							font-size 24px
+				.dropdown
+					.dropdown-menu
+						min-width 250px
+						max-width 100%
+						border 0px
+						box-shadow 0px
+						background $text-color-3
+						box-shadow 0px 0px 10px 0px lightgray
+						border-radius 15px
+						padding 0px
+						overflow hidden
+						.dropdown-content
+							.blog-pages
+								.heading
+									margin-bottom 1em 1em 0em 1em
+									.main-heading
+										font-size 18px
+										font-weight 600
+										color $div-back-color 
+										margin 0px
+										padding 1em
+								.main-content
+									.list-unstyled
+										li 
+											a
+												font-size 14px
+												font-weight 500
+												color $text-color
+												padding 1em 1em
+												display inline-block
+												width 100%
+												&:hover
+													background $div-back-color
+													color $text-color-1 
+	.navbar-color
+		background $div-back-color
+	
+	.sticky-top
+		background $div-back-color
+		// padding .5rem 1rem
+		@media only screen and (max-width: 800px) 
+			padding .5rem 1rem
+
+footer
+	padding 3em 0
+	border-bottom 1px solid lightgray
+	.footer-div
+		.main-img
+			width 100%
+			height 500px
+			overflow hidden
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.news
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+				display inline-block
+			.heading
+				margin-bottom 1em
+				.main-heading
+					font-size 14px
+					font-weight 600
+					color $div-back-color
+					margin 0px
+			.list-unstyled
+				li
+					a
+						span
+							font-size 10px
+							padding .5em 1em
+							margin-bottom .5em
+							color $text-color-1
+							background $div-back-color
+							border-radius 5px
+						.sub-content
+							font-size 14px
+							font-weight 400
+							color $text-color
+						.flex-div
+							display flex
+							width 100%
+							height auto
+							vertical-align middle
+							align-items center
+							.icon
+								margin-right .5em
+								background none
+								color $div-back-color
+								font-size 18px
+								padding 0px
+						
+			.insta-img
+				margin-bottom 1em
+				.main-img
+					border-radius 10px
+					overflow hidden
+					height 90px
+					margin-bottom .4em
+					img
+						width 100%
+						height 100%
+						object-fit cover
+			.list-inline
+				.list-inline-item
+					margin-right .2em
+					float left
+					.tag
+						display inline-block
+						padding .5em 1em
+						background $text-color-3
+						border-radius 5px
+						font-size 12px
+						margin-bottom .3em
+.bottom-footer
+	padding 2em 0
+	.bottom-footer-div
+		.flex-div
+			display flex
+			vertical-align middle
+			align-items center
+			@media only screen and (max-width: 800px) 
+				flex-direction column
+			.left
+				width 100%
+				.logo
+					.main-img
+						width 80px
+						height auto
+						overflow hidden
+						img
+							width 100%
+							height 100%
+							object-fit cover
+			.middle
+				width 100%
+				.list-inline
+					.list-inline-item
+						a
+							i
+								font-size 26px
+								color $div-back-color
+						.fb
+							&:hover
+								i
+									color #4867aa
+						.twit
+							&:hover
+								i
+									color #1da1f2
+						.drible
+							&:hover
+								i
+									color #ea4c89
+						.google
+							&:hover
+								i
+									color #e94335
+						.pin
+							&:hover
+								i
+									color #bb081d
+			.right
+				width 70%
+				@media only screen and (max-width: 800px) 
+					width 100%
+				.pay
+					.main-img
+						width 100%
+						height 50px
+						overflow hidden
+						@media only screen and (max-width: 800px) 
+							width 80px
+							margin-bottom .5em
+						img
+							width 100%
+							height 100%
+							object-fit cover
+							
+.account-page-sec
+	padding-top 1em
+	.account-page-div
+		box-shadow 0px 0px 25px 0px gray
+		.product
+			.flex-div
+				display flex
+				width 100%
+				height 620px
+				.left
+					width 30%
+					height auto
+					background $text-color-3
+					display flex
+					flex-direction column
+					.top-user
+						padding 1.5em 1.5em
+						.main-heading
+							margin 0px
+							margin-bottom 1.5em
+							font-size 16px
+							font-weight 600
+							color $div-back-color
+						.main-img
+							width 80px
+							height 80px
+							margin auto
+							border-radius 100%
+							overflow hidden
+							margin-bottom 1.5em
+							img
+								width 100%
+								height 100%
+								object-fit cover
+								object-position top
+						.name
+							font-size 14px
+							font-weight 600
+							color $text-color
+							margin 0px
+					.middle
+						height 100%
+						height 100%
+						.nav
+							.nav-link
+								padding .5em .5em
+								font-size 14px
+								font-weight 600
+								color $text-color
+								margin-top 1em
+								border-radius 0px
+								vertical-align middle
+								padding-left 4em
+								i
+									font-size 28px
+									margin-right .5em
+									vertical-align middle
+							.active
+								background transparent
+								border-left 3px solid $div-back-color 
+					.bottom
+						text-align center
+						padding 1em
+						.log-out
+							padding .5em
+							border-radius 100%
+							box-shadow 0px 0px 10px 0px lightgray
+							display inline-block
+							i
+								font-size 28px
+				.right
+					width 100%
+					overflow auto
+					.tab-content
+						.tab-pane
+							.profile-div
+								margin-bottom 25px
+								float left
+								width 100%
+								.profile-heading
+									padding 15px 30px
+									background $div-back-color 
+									color white
+									z-index 9
+									.main-header
+										margin 0px
+										i 
+											font-size 22px
+											margin-right 10px
+											vertical-align middle
+										a
+											color white
+											&:hover
+											&:focus
+											&:active
+											&:visited
+												color whire
+								.profile-img
+									padding 25px
+									background lightgray
+									background url('../images/user.png'), url('../images/blur.jpg')
+									background-blend-mode overlay
+									background-repeat no-repeat
+									background-size cover
+									float left
+									width 100%
+									height auto
+									display inline-block
+									.main-img
+										width 180px
+										height 180px
+										margin auto
+										position relative
+										overflow hidden
+										margin-bottom 25px
+										background gray
+										img
+											width 100%
+											height 100%
+											object-fit cover
+										input
+											position absolute
+											top -30px
+											left 0
+											right 0
+											bottom 0
+											cursor pointer
+								.profile-form
+									padding 25px
+									float left
+									width 100%
+									height auto
+									display inline-block
+									background white
+									.heading
+										margin-bottom 3em
+										.main-header
+											font-size 18px
+											font-weight 600
+											color $text-color
+									.prfile-main 
+										.prfile
+											.content-div
+												label
+													font-size 14px
+													font-weight 600
+													color $text-color
+													margin-right 1em
+													vertical-align middle
+												span
+													font-size 14px
+													font-weight 400
+													color $text-color
+													vertical-align text-bottom
+											form
+												.form-group
+													label
+														font-size 14px
+														font-weight 600
+														color $text-color
+													input
+														border-radius 0px
+														height 40px
+														font-size 14px
+														font-weight 400
+														color $text-color
+												button
+													width auto
+										.prfile-edit
+											display none
+											form
+												.form-group
+													label
+														font-size 14px
+														font-weight 600
+														color $text-color
+													input
+														border-radius 0px
+														height 40px
+														font-size 14px
+														font-weight 400
+														color $text-color
+														box-shadow none
+														outline none
+												button
+													width auto
+							.cart-div
+								.cart-heading
+									padding 0px 0px
+									background $text-color-1
+									color white
+									z-index 9
+									.nav
+										margin 0px
+										display flex
+										width 100%
+										flex-direction row
+										vertical-align middle
+										align-items center
+										flex-wrap nowrap
+										.nav-item
+											width 100%
+											text-align center
+											a
+												padding 15px 30px
+												font-size 14px
+												font-weight 600
+												color $text-color
+												border-radius 0px
+											.active
+												background $div-back-color
+												color $text-color-1
+										.main-header
+											margin 0px
+											i 
+												font-size 22px
+												margin-right 10px
+								.cart-table
+									padding 25px
+									.table-responsive
+										.table
+											align-items center
+											vertical-align middle
+											tr
+												&:hover
+													box-shadow 0px 0px 30px 0px lightgray
+												th
+													font-size 14px
+													font-weight 600
+													color $text-color
+												td
+													vertical-align middle
+													.left-img
+														.main-img
+															width 60px
+															height 60px
+															overflow hidden
+															img
+																width 100%
+																height 100%
+																object-fit cover
+													.heading
+														.main-header
+															a
+																font-size 14px
+																font-weight 600
+																color $text-color 
+														.sub-content
+															font-size 14px
+															font-weight 400
+															color $text-color 
+															margin 0px
+													.count
+														text-align center
+														font-size 14px
+													.date
+														text-align center
+														font-size 14px
+													.mony
+														.main-header
+															font-weight 600
+															color $text-color 
+															text-align left
+															font-size 14px
+													.delete
+														a
+															i
+																font-size 24px
+																color $text-color
+														&:hover
+															i
+																color $div-back-color
+									.tab-pane
+										.table-responsive
+											.table
+												align-items center
+												vertical-align middle
+												tr
+													&:hover
+														box-shadow 0px 0px 30px 0px lightgray
+													th
+														font-size 14px
+														font-weight 600
+														color $text-color
+													td
+														vertical-align middle
+														.left-img
+															.main-img
+																width 60px
+																height 60px
+																overflow hidden
+																img
+																	width 100%
+																	height 100%
+																	object-fit cover
+														.heading
+															.main-header
+																a
+																	font-size 14px
+																	font-weight 600
+																	color $text-color 
+															.sub-content
+																font-size 12px
+																font-weight 400
+																color $text-color 
+																margin 0px
+														.count
+															text-align center
+															font-size 12px
+														.date
+															text-align center
+															font-size 12px
+														.order-id
+															font-size 12px
+															font-weight 500
+															color $text-color
+														.mony
+															.main-header
+																font-weight 600
+																color $text-color 
+																text-align left
+																font-size 12px
+														.delete
+															a
+																i
+																	font-size 20px
+																	color $text-color
+															&:hover
+																i
+																	color $div-back-color
+							.wishlist-div
+								.cart-heading
+									padding 15px 30px
+									background $div-back-color 
+									color white
+									z-index 9
+									.main-header
+										margin 0px
+										i 
+											font-size 22px
+											margin-right 10px
+								.list-main
+									.list-unstyled
+										margin 0px
+										li
+											padding .5em 1em
+											&:hover
+												box-shadow 0px 0px 25px 0px lightgray
+											.list-content
+												.left-img
+													.main-img
+														width 120px
+														height 120px
+														overflow hidden
+														margin auto
+														border-radius 10px
+														a
+															display inline-block
+															width 100%
+															height 100%
+															img
+																width 100%
+																height 100%
+																object-fit contain
+												.content
+													position relative
+													padding-right 60px
+													@media only screen and (max-width: 600px)
+														text-align center
+														padding 0px
+														margin-top 10px
+													.main-header
+														margin-bottom 10px
+														a
+															font-size 14px
+															font-weight 600
+															color $text-color 
+															&:hover
+																text-decoration none
+													.sub-content
+														font-size 12px
+														font-weight 500
+														color $text-color
+														margin-bottom 10px 
+													.star-div
+														margin-bottom 10px
+														.star-content
+															font-size 10px
+															font-weight 300
+															color white
+															background #4867aa
+															padding 5px 10px
+															border-radius 3px
+															margin-right 10px
+															i
+																font-size 10px
+																margin-left 5px
+														.count
+															font-size 12px
+															color count
+													.amount
+														font-weight 600
+														font-size 12px
+														color $text-color 
+													.dlt-btn-div
+														button
+															position absolute
+															top 0
+															right 0
+															padding 7px 10px
+															border-radius 0px
+															background transparent
+															border transparent
+															outline none
+															@media only screen and (max-width: 600px)
+																position static
+															i
+																font-size 22px
+																color lightgray
+															&:hover
+																background transparent
+																border transparent
+																i
+																	color #fb9393
+							.notification-div
+								.cart-heading
+									padding 15px 30px
+									background $div-back-color 
+									color white
+									z-index 9
+									.main-header
+										margin 0px
+										i 
+											font-size 22px
+											margin-right 10px
+								.list-content
+									.list-unstyled
+										margin 0px
+										li
+											&:hover
+												box-shadow 0px 0px 25px 0px lightgray
+											.un-read
+												background #fafaf8
+											.flex-div
+												display flex
+												width 100%
+												height auto
+												align-items center
+												vertical-align middle
+												padding 15px
+												cursor pointer
+												.left-close-btn
+													margin-right 15px
+												.middle-img
+													.main-img
+														width 50px
+														height 50px
+														overflow hidden
+														margin-right 15px
+														a 
+															display inline-block
+															width 100%
+															height 100%
+															img
+																width 100%
+																height 100%
+																object-fit contain
+												.right-content
+													.heading
+														font-size 14px
+														font-weight 400
+														color #484848
+														a
+															font-size 14px
+															font-weight 600
+															color #4867aa
+															margin-right 5px
+															&:hover
+																text-decoration none
+													.timing
+														font-size 12px
+														font-weight 400
+														color #484848
+														.time
+															font-size 12px
+															font-weight 400
+															color #484848
+														.date
+															font-size 12px
+															font-weight 400
+															color #484848

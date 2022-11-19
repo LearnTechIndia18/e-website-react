@@ -1,0 +1,954 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.row.no-gutters-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters-0 > [class^="col-"],
+.row.no-gutters-0 > [class*=" col-"] {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	
+	.navbar
+		background transparent
+		padding 0px
+		.navbar-collapse
+			.navbar-nav
+				.nav-item
+					.nav-link
+						margin 1.3em
+						font-size 16px
+						font-weight 500
+						color $text-color-1
+						i
+							font-size 22px
+						.user
+							.main-img
+								width 40px
+								height 40px
+								overflow hidden
+								border-radius 100%
+								display inline-block
+								vertical-align middle
+								img
+									width 100%
+									height 100%
+									object-fit cover
+					.user-link
+						margin .8em 1.3em
+						
+				.active
+					.nav-link
+						color $text-color
+						font-weight 600
+						i
+							font-size 24px
+				.dropdown
+					.dropdown-menu
+						min-width 250px
+						max-width 100%
+						border 0px
+						box-shadow 0px
+						background $text-color-3
+						box-shadow 0px 0px 10px 0px lightgray
+						border-radius 15px
+						padding 0px
+						overflow hidden
+						.dropdown-content
+							.blog-pages
+								.heading
+									margin-bottom 1em 1em 0em 1em
+									.main-heading
+										font-size 18px
+										font-weight 600
+										color $div-back-color 
+										margin 0px
+										padding 1em
+								.main-content
+									.list-unstyled
+										li 
+											a
+												font-size 14px
+												font-weight 500
+												color $text-color
+												padding 1em 1em
+												display inline-block
+												width 100%
+												&:hover
+													background $div-back-color
+													color $text-color-1 
+	.navbar-color
+		background $div-back-color
+	
+	.sticky-top
+		background $div-back-color
+		// padding .5rem 1rem
+		@media only screen and (max-width: 800px) 
+			padding .5rem 1rem
+
+footer
+	padding 3em 0
+	border-bottom 1px solid lightgray
+	.footer-div
+		.main-img
+			width 100%
+			height 500px
+			overflow hidden
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.news
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+				display inline-block
+			.heading
+				margin-bottom 1em
+				.main-heading
+					font-size 14px
+					font-weight 600
+					color $div-back-color
+					margin 0px
+			.list-unstyled
+				li
+					a
+						span
+							font-size 10px
+							padding .5em 1em
+							margin-bottom .5em
+							color $text-color-1
+							background $div-back-color
+							border-radius 5px
+						.sub-content
+							font-size 14px
+							font-weight 400
+							color $text-color
+						.flex-div
+							display flex
+							width 100%
+							height auto
+							vertical-align middle
+							align-items center
+							.icon
+								margin-right .5em
+								background none
+								color $div-back-color
+								font-size 18px
+								padding 0px
+						
+			.insta-img
+				margin-bottom 1em
+				.main-img
+					border-radius 10px
+					overflow hidden
+					height 90px
+					margin-bottom .4em
+					img
+						width 100%
+						height 100%
+						object-fit cover
+			.list-inline
+				.list-inline-item
+					margin-right .2em
+					float left
+					.tag
+						display inline-block
+						padding .5em 1em
+						background $text-color-3
+						border-radius 5px
+						font-size 12px
+						margin-bottom .3em
+.bottom-footer
+	padding 2em 0
+	.bottom-footer-div
+		.flex-div
+			display flex
+			vertical-align middle
+			align-items center
+			@media only screen and (max-width: 800px) 
+				flex-direction column
+			.left
+				width 100%
+				.logo
+					.main-img
+						width 80px
+						height auto
+						overflow hidden
+						img
+							width 100%
+							height 100%
+							object-fit cover
+			.middle
+				width 100%
+				.list-inline
+					.list-inline-item
+						a
+							i
+								font-size 26px
+								color $div-back-color
+						.fb
+							&:hover
+								i
+									color #4867aa
+						.twit
+							&:hover
+								i
+									color #1da1f2
+						.drible
+							&:hover
+								i
+									color #ea4c89
+						.google
+							&:hover
+								i
+									color #e94335
+						.pin
+							&:hover
+								i
+									color #bb081d
+			.right
+				width 70%
+				@media only screen and (max-width: 800px) 
+					width 100%
+				.pay
+					.main-img
+						width 100%
+						height 50px
+						overflow hidden
+						@media only screen and (max-width: 800px) 
+							width 80px
+							margin-bottom .5em
+						img
+							width 100%
+							height 100%
+							object-fit cover
+							
+.shop-banner-sec
+	padding 3em 0 8em 0
+	background url("../images/banner1.jpg")
+	.product-banner-div
+		.flex-div
+			display flex
+			width 100%
+			height auto
+			align-items center
+			vertical-align middle
+			.left
+				width 100%
+				.sun-heading
+					font-weight 400
+					color $text-color-1
+					margin 0
+					margin-bottom .5em
+				.main-heading
+					font-weight 600
+					color $text-color-1
+					margin 0
+					margin-bottom .5em
+				.list-inline
+					.list-inline-item
+						vertical-align middle
+						align-items center
+						font-size 14px
+						color $text-color-1
+						a
+							font-size 16px
+							font-weight 500
+							color $text-color-1
+.shop-page-sec
+	margin-top -7%
+	.shop-page-div
+		box-shadow 0px 0px 25px 0px gray
+		.banner
+			.flex-div
+				display flex
+				width 100%
+				height auto
+				flex-direction row
+				.left
+					width 100%
+					background #a7a7aa
+					padding 1.5em
+					.flex-div
+						display flex
+						width 100%
+						height 100%
+						flex-direction column
+						.top
+							height 100%
+							.tag
+								padding .5em 1em
+								background $text-color-2
+								color $text-color-1
+						.middle
+							height 100%
+							.sub-content
+								margin 0px
+								margin-bottom 1em
+								font-size 16px
+								font-weight 600
+								color $text-color
+							.main-heading
+								font-weight 600
+								color $text-color
+						.bottom
+							.btn
+								width auto
+					.main-img
+						width 100%
+						height 400px
+						overflow hidden
+						img
+							width 100%
+							height 100% 
+							object-fit contain
+				.right
+					width 100%
+					background #dad9df
+					padding 1.5em
+					.flex-div
+						display flex
+						width 100%
+						height 100%
+						flex-direction column
+						.top
+							height 100%
+							.tag
+								padding .5em 1em
+								background $text-color-2
+								color $text-color-1
+						.middle
+							height 100%
+							.sub-content
+								margin 0px
+								margin-bottom 1em
+								font-size 16px
+								font-weight 600
+								color $text-color
+							.main-heading
+								font-weight 600
+								color $text-color
+						.bottom
+							.btn
+								width auto
+					.main-img
+						width 100%
+						height 400px
+						overflow hidden
+						img
+							width 100%
+							height 100% 
+							object-fit contain
+		.product
+			.filters
+				box-shadow 0px 0px 10px 0px lightgray
+				.heading
+					padding 1.5em 2em
+					border-bottom 1px solid lightgray
+					.main-heading
+						font-size 16px
+						font-weight 600
+						color $text-color
+						margin 0px
+				.filters-list
+					padding 0 1em 1em 1em
+					.accordion
+						.card
+							margin-top 1em
+							.card-header
+								padding 0px
+								.mb-0
+									margin 0px
+									.btn
+										display inline-block
+										width 100%
+										height auto
+										padding .8em 1.5em
+										border-radius 0px
+										box-shadow 0px 0px 10px 0px lightgray 
+										font-size 14px
+										color $div-back-color
+										font-weight 600
+										text-align left
+										text-decoration none
+							.collapse
+								.card-body
+									.list-group
+										.list-group-item
+											border 0px
+											padding 0px
+											margin-bottom 1em
+											a
+												font-size 14px
+												font-weight 500
+												color $text-color
+												.badge-pill
+													font-size 14px
+													font-weight 400
+												&:hover
+													color $div-back-color
+									.brand-div
+										.list-group
+											.list-group-item
+												border 0px
+												padding 0px
+												margin-bottom 1em
+												a
+													font-size 14px
+													font-weight 500
+													color $text-color
+													.badge-pill
+														font-size 14px
+														font-weight 400
+													&:hover
+														color $div-back-color
+												.more
+													font-size 14px
+													font-weight 600
+													color $text-color-2
+													&:hover
+														color $text-color-2
+												.beige
+													background beige
+													width 15px
+													height 15px
+													border-radius 100%
+													box-shadow 0px 0px 5px 0px #b4b0b0
+												.black
+													background black
+													width 15px
+													height 15px
+													border-radius 100%
+													box-shadow 0px 0px 5px 0px #b4b0b0
+												.blue
+													background blue
+													width 15px
+													height 15px
+													border-radius 100%
+													box-shadow 0px 0px 5px 0px #b4b0b0
+												.bronze
+													background rgb(140, 120, 83)
+													width 15px
+													height 15px
+													border-radius 100%
+													box-shadow 0px 0px 5px 0px #b4b0b0
+												.burgundy
+													background rgb(144, 0, 32)
+													width 15px
+													height 15px
+													border-radius 100%
+													box-shadow 0px 0px 5px 0px #b4b0b0
+												.search-div
+													position relative
+													input
+														width 100%
+														height 45px
+														font-size 14px
+														font-weight 500
+														border 0px
+														box-shadow none
+														outline none
+														border-bottom 1px solid lightgray
+														color $text-color
+														padding-left 40px
+													i
+														position absolute
+														top 25%
+														left 2%
+														font-size 24px
+									.price
+										.top
+											margin-bottom 2em
+											display flex
+											width 100%
+											heading auto
+											align-items center
+											vertical-align middle
+											.left
+												width 100%
+												padding 1em
+												.sub-heading
+													font-size 14px
+													font-weight 600
+													color $text-color
+													margin 0
+													margin-bottom .5em
+												input
+													width 100%
+													height 40px
+													border-radius 20px
+													border 1px solid lightgray
+													box-shadow none
+													outline none
+													font-size 12px
+													font-weight 500
+													padding .5em 1.5em
+													color $text-color
+											.right
+												width 100%
+												padding 1em
+												.sub-heading
+													font-size 14px
+													font-weight 600
+													color $text-color
+													margin 0
+													margin-bottom .5em
+												input
+													width 100%
+													height 40px
+													border-radius 20px
+													border 1px solid lightgray
+													box-shadow none
+													outline none
+													font-size 12px
+													font-weight 500
+													padding .5em 1.5em
+													color $text-color
+			.filters-right
+				box-shadow 0px 0px 0px 0px lightgray
+				.flex-div
+					display flex
+					width 100%
+					height 100%
+					position relative
+					.left
+						width 100%
+						.heading
+							padding 1.5em 2em
+							border-bottom 1px solid lightgray
+							.main-heading
+								font-size 16px
+								font-weight 600
+								color $text-color
+								margin 0px
+					.right
+						width auto
+						position absolute
+						top 10%
+						right 0
+						.nav
+							margin 0px !important
+							.nav-item
+								a
+									font-size 24px
+									color $text-color
+								.active
+									background transparent
+									color $div-back-color
+									outline none
+									box-shadow none
+			.main-flex-div
+				display flex
+				width 100%
+				height 97.7%
+				flex-direction column
+				.top
+					width 100%
+					height 100%
+					.product-list-main
+						padding 1em
+						.tab-content
+							.tab-pane
+								.product-list
+									.prodict
+										margin-bottom 1.5em
+										&:hover
+											.icon-list
+												display block !important
+											.top-img
+												.main-img
+													img
+														transform scale(1.1)
+										.overall-div
+											display inline-block
+											width 100%
+											position absolute
+											top 0
+											left 0
+											bottom 0
+											right 0
+											z-index 1
+										.top-img
+											width 100%
+											height 300px
+											position relative
+											padding 1.3em
+											background #f4f4f4
+											overflow hidden
+											border-radius 15px
+											margin-bottom 1em
+											.main-img
+												height 100%
+												overflow hidden
+												img
+													width 100%
+													height 100%
+													object-fit contain
+													transition transform .5s
+											.icon-list
+												display block
+												margin auto
+												position absolute 
+												text-align center
+												left 0
+												bottom 12px
+												width 100%
+												z-index 2
+												.list
+													background $text-color-1
+													box-shadow 0px 0px 10px 0px #848484
+													border-radius 5px
+													width fit-content
+													margin auto
+													overflow hidden
+													.search
+														padding .3em .5em
+														font-size 22px
+														display inline-block
+														background $text-color-1
+														float left
+														&:hover
+															background $div-back-color
+															color $text-color-1
+													.wish-list
+														padding .3em .5em
+														font-size 22px
+														display inline-block
+														background $text-color-1
+														float left
+														&:hover
+															background $div-back-color
+															color $text-color-1
+													.cart
+														padding .3em .5em
+														font-size 22px
+														display inline-block
+														background $text-color-1
+														float left
+														&:hover
+															background $div-back-color
+															color $text-color-1
+													.wish-list
+														border-left 1px solid lightgray
+														border-right 1px solid lightgray
+													.wish-active
+														background $div-back-color
+														i
+															color $text-color-1
+											.discount
+												position absolute
+												top 2%
+												right 10%
+												span
+													font-size 12px
+													font-weight 600
+													color $div-back-color 
+										.prodict-dearils
+											.name
+												font-size 14px
+												font-weight 600
+												color $div-back-color
+												margin 0px
+												margin-bottom .2em
+											.stars
+												display inline-block
+												margin-bottom .2em
+												span
+													margin 0px
+													i 
+														font-size 12px
+														margin 0px
+														color $text-color
+											.star-active
+												span
+													margin 0px
+													i 
+														font-size 12px
+														margin 0px
+														color $text-color-2
+												.no-color
+													i
+														color $text-color
+											.amount
+												.canceld-amount
+													margin-right .5em
+													color $text-color 
+													font-size 14px
+													font-weight 500
+													text-decoration line-through
+												.main-amount
+													color $div-back-color
+													font-size 14px
+													font-weight 500
+								.table-list
+									height 580px
+									overflow auto
+									.table
+										tbody
+											tr
+												margin-bottom .5em
+												padding .5em 1em
+												vertical-align middle
+												position relative
+												&:hover
+													cursor pointer
+													box-shadow 0px 0px 10px 0px lightgray
+												th
+													// background $text-color-3
+													vertical-align middle
+													.main-img
+														width 70px
+														height 70px
+														border-radius 100%
+														overflow hidden
+														box-shadow 0px 0px 10px 0px lightgray
+														background $text-color-1
+														img
+															width 100%
+															height 100%
+															object-fit contain
+												td
+													// background $text-color-3
+													vertical-align middle
+													.content
+														.main-heading
+															font-size 14px
+															font-weight 600
+															color $div-back-color
+															margin 0px
+															margin-bottom .5em
+														.sub-content
+															font-size 12px
+															color $text-color 
+															margin 0px
+													.color
+														font-size 14px
+														font-weight 500
+														color $text-color 
+													.count
+														.flex-div
+															display flex 
+															width 100%
+															height auto
+															vertical-align middle
+															align-items center
+															.left
+																width 100%
+																input
+																	width 60px
+																	height 50px
+																	font-size 14px
+																	color $text-color 
+																	border 0px
+																	outline none
+																	box-shadow none
+																	text-align center
+																	background transparent
+															.right 
+																width 100%
+																.flex-div
+																	display flex 
+																	width 100%
+																	height auto
+																	vertical-align middle
+																	align-items center
+																	flex-direction column
+																	.top
+																		margin-bottom .5em
+																		.add
+																			display inline-block
+																			width 20px
+																			height 20px
+																			border-radius 100%
+																			background gray
+																			text-align center
+																			font-size 14px
+																			color $text-color-1 
+																			padding 0px 0
+																	.bottom
+																		.less
+																			display inline-block
+																			width 20px
+																			height 20px
+																			border-radius 100%
+																			background gray
+																			text-align center
+																			font-size 14px
+																			color $text-color-1 
+																			padding 1px 0
+													.price
+														font-size 14px
+														font-weight 600
+														color $text-color
+														width 100px
+														text-align center
+													.offer
+														font-size 12px
+														padding .3em .8em
+														background $text-color-3
+														width 52px
+														margin auto
+														border-radius 5px
+													.wish-list
+														.list-inline
+															.list-inline-item
+																a
+																	display inline-block
+																	padding-top 1em
+																	i
+																		font-size 20px
+																		color $text-color
+															.active
+																a
+																	i
+																		color $div-back-color
+												.no-color
+													background transparent
+													.close-btn
+														.close
+															box-shadow none
+															outline none
+															span
+																i
+																	font-size 18px
+																	font-weight 600
+																	color $text-color
+											.empty
+												width 100%
+												height .5em
+												background $text-color-1
+												td
+													background $text-color-1
+													padding 0px
+													.empty-div
+														width 100%
+														height .5em
+														background transparent
+				.bottom
+					text-align center
+					margin 0 auto

@@ -1,0 +1,349 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	.navbar
+		background transparent
+		padding 0px
+		.navbar-collapse
+			.navbar-nav
+				.nav-item
+					.nav-link
+						margin 1.3em
+						font-size 16px
+						font-weight 500
+						color $text-color-1
+				.active
+					.nav-link
+						color $text-color
+						font-weight 600
+				.dropdown
+					.dropdown-menu
+						min-width 250px
+						max-width 100%
+						border 0px
+						box-shadow 0px
+						background $text-color-3
+						box-shadow 0px 0px 10px 0px lightgray
+						border-radius 15px
+						padding 0px
+						overflow hidden
+						.dropdown-content
+							.blog-pages
+								.heading
+									margin-bottom 1em 1em 0em 1em
+									.main-heading
+										font-size 18px
+										font-weight 600
+										color $div-back-color 
+										margin 0px
+										padding 1em
+								.main-content
+									.list-unstyled
+										li 
+											a
+												font-size 14px
+												font-weight 500
+												color $text-color
+												padding 1em 1em
+												display inline-block
+												width 100%
+												&:hover
+													background $div-back-color
+													color $text-color-1 
+	.navbar-color
+		background $div-back-color
+	.slider-sec
+		position relative
+		height 730px
+		overflow hidden
+		.banner-back
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 730px
+			z-index 0
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.slide
+			.carousel-inner
+				.carousel-item
+					.product-1-div
+						padding 12em 0
+						.flex-div
+							display flex
+							width 100%
+							height auto
+							.left
+								width 100%
+								height auto
+								padding-right 2em
+								text-align right
+								@media only screen and (max-width: 800px) 
+									display none
+								.flex-div
+									display flex
+									width 100%
+									height 100%
+									align-items flex-end
+									vertical-align middle
+									flex-direction column
+									.top
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.middle
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.bottom
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+							.middle
+								width 100%
+								.main-img
+									width 100%
+									height 450px
+									overflow hidden
+									img
+										width 100%
+										height 100%
+										object-fit cover
+							.right
+								width 100%
+								height auto
+								padding-left 2em
+								text-align left
+								@media only screen and (max-width: 800px) 
+									display none
+								.flex-div
+									display flex
+									width 100%
+									height 100%
+									// align-items center
+									vertical-align middle
+									flex-direction column
+									.top
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.middle
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.bottom
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+	.sticky-top
+		background $div-back-color
+	
+
+	.faq-sec
+		.header
+			margin-bottom 2em
+			height 200px
+			padding-top 5em
+			background url('../images/banner1.jpg')
+			.main-heading
+				font-weight 600
+				color $div-back-color 
+				margin 0px
+		.faq-div
+			.faq
+				.nav
+					background #c3bebe
+					.nav-link
+						padding 1.5em 1.5em
+						border-radius 0px
+						font-size 14px
+						font-weight 600
+						color $text-color
+					.active
+						background $div-back-color
+						color $text-color-1
+			.tab-content
+				.tab-pane
+					.accordion
+						.card
+							border-radius 0px
+							border none
+							.card-header
+								padding 0px
+								.mb-0
+									.btn
+										padding 1.5em
+										display inline-block
+										width 100%
+										font-size 14px
+										font-weight 600
+										color $text-color
+										text-align left
+										white-space unset
+										text-decoration none
+										background $div-back-color
+										color $text-color-1
+										border-radius 0px
+									.collapsed
+										background $text-color-3 
+										color $text-color
+							.collapse
+								.font-body
+									font-size 14px !important
+									font-weight 400
+									color $text-color
+										

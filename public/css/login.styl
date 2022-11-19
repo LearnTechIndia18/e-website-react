@@ -1,0 +1,224 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.row.no-gutters-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters-0 > [class^="col-"],
+.row.no-gutters-0 > [class*=" col-"] {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+		background  $div-back-color
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	height 100%
+	.login-sec
+		display table
+		width 100%
+		height -webkit-fill-available
+		.login-div
+			display table-cell
+			width 100%
+			height 100%
+			vertical-align middle
+			align-items center
+			margin auto
+			.login-inner-div
+				display flex
+				width 100%
+				height 100%
+				background $text-color-3
+				margin auto
+				flex-direction column
+				.top-nav
+					width 100%
+					padding 1em 1.5em
+					.flex-div
+						display flex
+						width 100%
+						height auto
+						flex-direction row
+						vertical-align middle
+						align-items center
+						.left
+							width 100%
+							.heading
+								.main-header
+									font-size 18px
+									font-weight 600
+									color $div-back-color
+									margin 0px
+						.right
+							width 100%
+							text-align right
+							.nav
+								margin 0px
+								float right
+								.nav-item
+									margin-left 1em
+									a
+										font-size 14px
+										font-weight 600
+										color $text-color
+				.bottom
+					margin-top 2em
+					.login
+						.inner-div
+							width 450px
+							height auto
+							margin auto
+							.heading
+								margin-bottom 2em
+								text-align center
+								.main-header
+									font-weight 600
+									color $div-back-color
+							.tab-content
+								.tab-pane
+									form
+										.form-group
+											label
+												font-size 14px
+												font-weight 600
+												color $text-color
+												margin-bottom .5em
+											input
+												width 100%
+												height 50px
+												border-radius 0px
+												box-shadow none
+												outline none
+												border 1px solid lightgrey
+												font-size 14px
+												font-weight 500
+												color $text-color
+											.right
+												float right
+												font-size 14px
+												font-weight 600
+												color $div-back-color 
+										.btn 
+											width auto
+											margin auto
+					

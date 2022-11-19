@@ -1,0 +1,419 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+.table-borderless
+	tr,td,th,thead
+		border 0px !important
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.row.no-gutters-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters-0 > [class^="col-"],
+.row.no-gutters-0 > [class*=" col-"] {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+		background  $div-back-color
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	height 100%
+.cart-sec
+	display table
+	width 100%
+	height -webkit-fill-available
+	position relative
+	overflow hidden
+	.cart-div
+		display table-cell
+		width 100%
+		height 100%
+		vertical-align middle
+		align-items center
+		margin auto
+		overflow hidden
+		.cart-list
+			display flex
+			width 100%
+			height 100%
+			flex-direction column
+			.heading
+				margin-bottom 1.5em
+				margin-top 1.5em
+				.main-heading
+					font-size 22px
+					font-weight 600
+					color $div-back-color
+					margin 0px
+			.bottom
+				padding 1em 1.5em
+				.back-btn
+					font-size 14px
+					font-weight 600
+					color $text-color-2
+					i
+						font-size 20px
+						margin-right .5em
+						vertical-align middle
+			.table-list
+				height 580px
+				overflow auto
+				.table
+					tbody
+						tr
+							margin-bottom .5em
+							padding .5em 1em
+							vertical-align middle
+							th
+								background $text-color-3
+								vertical-align middle
+								.main-img
+									width 70px
+									height 70px
+									border-radius 100%
+									overflow hidden
+									box-shadow 0px 0px 10px 0px lightgray
+									background $text-color-1
+									img
+										width 100%
+										height 100%
+										object-fit contain
+							td
+								background $text-color-3
+								vertical-align middle
+								.content
+									.main-heading
+										font-size 14px
+										font-weight 600
+										color $div-back-color
+										margin 0px
+										margin-bottom .5em
+									.sub-content
+										font-size 12px
+										color $text-color 
+										margin 0px
+								.color
+									font-size 14px
+									font-weight 500
+									color $text-color 
+								.count
+									.flex-div
+										display flex 
+										width 100%
+										height auto
+										vertical-align middle
+										align-items center
+										.left
+											width 100%
+											input
+												width 60px
+												height 50px
+												font-size 14px
+												color $text-color 
+												border 0px
+												outline none
+												box-shadow none
+												text-align center
+												background transparent
+										.right 
+											width 100%
+											.flex-div
+												display flex 
+												width 100%
+												height auto
+												vertical-align middle
+												align-items center
+												flex-direction column
+												.top
+													margin-bottom .5em
+													.add
+														display inline-block
+														width 20px
+														height 20px
+														border-radius 100%
+														background gray
+														text-align center
+														font-size 14px
+														color $text-color-1 
+														padding 0px 0
+												.bottom
+													.less
+														display inline-block
+														width 20px
+														height 20px
+														border-radius 100%
+														background gray
+														text-align center
+														font-size 14px
+														color $text-color-1 
+														padding 1px 0
+								.price
+									font-size 14px
+									font-weight 600
+									color $text-color
+									width 100px
+									text-align center
+							.no-color
+								background transparent
+								.close-btn
+									.close
+										box-shadow none
+										outline none
+										span
+											i
+												font-size 18px
+												font-weight 600
+												color $text-color
+						.empty
+							width 100%
+							height .5em
+							background $text-color-1
+							td
+								background $text-color-1
+								padding 0px
+								.empty-div
+									width 100%
+									height .5em
+									background transparent
+		.right-div
+			display table
+			width 100%
+			height 100%
+			background $text-color-1
+			box-shadow 0px 0px 10px 0px lightgray
+			.flex-div
+				display flex 
+				width 100%
+				height 100%
+				vertical-align middle
+				align-items center
+				flex-direction column
+				.top
+					width auto
+					.heading
+						margin-bottom 1.5em
+						margin-top 1.5em
+						.main-heading
+							font-size 22px
+							font-weight 600
+							color $div-back-color
+							margin 0px
+				.middle
+					height 100%
+					.card-list
+						height 100%
+						form
+							height 100%
+							.flex-div
+								display flex 
+								width 100%
+								height 100%
+								vertical-align middle
+								align-items center
+								flex-direction column
+								.top
+									height 100%
+									padding 5em 1.5em
+								.bottom
+									height auto
+									width 100%
+									button
+										width 100%
+										border-radius 0px
+							.form-group
+								margin-bottom 3.5em
+								label
+									font-size 14px
+									font-weight 600
+									color $text-color
+								input
+									width 100%
+									border 0px
+									height 50px
+									border-radius 0px
+									border-bottom 1px solid lightgray
+									outline none
+									box-shadow none
+									font-size 14px
+									font-weight 400
+									color $text-color
+									background transparent
+							.form-check
+								display inline-block
+								.sub-content
+									font-size 14px
+									font-weight 600
+									color $text-color
+									margin 0px
+									margin-bottom .0em
+								label
+									background transparent
+									border 0px
+									outline none
+									box-shadow none
+									width 100%
+									font-size 14px
+									font-weight 600
+									color $text-color
+									.main-img
+										width 50px
+										height 50px
+										overflow hidden
+										margin auto
+										border-radius 100%
+										margin-bottom 1em
+										padding 6px
+										img
+											width 100%
+											height 100%
+											object-fit cover
+											border 0px
+											background transparent
+										.img-hover
+												display none
+									.input
+										display none
+									span
+										font-size 16px
+										font-weight 300
+										color $font-color-1
+										
+								.active_style
+									.main-img
+										background $btn-main-color
+										.img
+											display none
+										.img-hover
+											display block
+									span
+										color $text-color
+								.active_style
+									&:hover
+									&:focus
+									&:active
+									&:visited
+										.main-img
+											background $btn-main-color
+											.img
+												display none
+											.img-hover
+												display block
+					

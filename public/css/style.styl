@@ -1,0 +1,900 @@
+@import 'nib'
+@import 'style/*'
+normalize-base()
+normalize-html5()
+typographic()
+
+body,html{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.left-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	left 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.right-icon
+	color $div-back-color
+	position absolute
+	top 18%
+	right 1%
+	font-size 24px
+	color #d5d4d4
+	cursor pointer
+	z-index 1000
+	display inline-block
+	background $text-color-1
+	border-radius 10px
+	box-shadow 0px 0px 10px 0px lightgrey
+	&:hover
+		cursor pointer
+.container-middle
+	padding-left 80px
+	padding-right 80px 
+	max-width 1520px
+	@media only screen and (max-width: 1200px)
+		padding-left 15px
+		padding-right 15px 
+		max-width unset
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: .2em;
+  padding-left: .2em;
+}
+.slid-content button.owl-prev {
+    position: absolute;
+    top: 30%;
+    left: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-prev span{
+	font-size:50px;
+	color $text-color
+}
+
+.slid-content button.owl-next {
+    position: absolute;
+    top: 30%;
+    right: -8%;
+    box-shadow: none;
+    outline: none;
+}
+.slid-content button.owl-next span{
+	font-size:50px;
+	color $text-color
+}
+.button-defalte
+	padding 1em 3em
+	text-align center
+	font-weight 600
+	font-size 14px
+	display inline-block
+	width 100%
+	border 1px solid transparent
+	border-radius 10px
+	background  $div-back-color
+	color $text-color-1
+	box-shadow none
+	outline none
+	&:hover
+	&:focus
+	&:active 
+	&:visited
+		color $text-color-1
+		box-shadow none
+		outline none
+.owl-dots {
+    display: inline-block;
+    text-align center
+    width 100%
+}
+.owl-dots .owl-dot span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+a
+	text-decoration none
+	color $text-color
+	&:hover
+		text-decoration none
+		color $text-color
+.main-body
+	
+	.navbar
+		background transparent
+		padding 0px
+		.navbar-collapse
+			.navbar-nav
+				.nav-item
+					.nav-link
+						margin 1.3em
+						font-size 16px
+						font-weight 500
+						color $text-color-1
+				.active
+					.nav-link
+						color $text-color
+						font-weight 600
+				.dropdown
+					.dropdown-menu
+						min-width 250px
+						max-width 100%
+						border 0px
+						box-shadow 0px
+						background $text-color-3
+						box-shadow 0px 0px 10px 0px lightgray
+						border-radius 15px
+						padding 0px
+						overflow hidden
+						.dropdown-content
+							.blog-pages
+								.heading
+									margin-bottom 1em 1em 0em 1em
+									.main-heading
+										font-size 18px
+										font-weight 600
+										color $div-back-color 
+										margin 0px
+										padding 1em
+								.main-content
+									.list-unstyled
+										li 
+											a
+												font-size 14px
+												font-weight 500
+												color $text-color
+												padding 1em 1em
+												display inline-block
+												width 100%
+												&:hover
+													background $div-back-color
+													color $text-color-1 
+	.navbar-color
+		background $div-back-color
+	.slider-sec
+		position relative
+		height 730px
+		overflow hidden
+		.banner-back
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 730px
+			z-index 0
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.slide
+			.carousel-inner
+				.carousel-item
+					.product-1-div
+						padding 12em 0
+						.flex-div
+							display flex
+							width 100%
+							height auto
+							// align-items center
+							// vertical-align middle
+							.left
+								width 100%
+								height auto
+								padding-right 2em
+								text-align right
+								@media only screen and (max-width: 800px) 
+									display none
+								.flex-div
+									display flex
+									width 100%
+									height 100%
+									align-items flex-end
+									vertical-align middle
+									flex-direction column
+									.top
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.middle
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.bottom
+										height 100%
+										text-align right
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+							.middle
+								width 100%
+								.main-img
+									width 100%
+									height 450px
+									overflow hidden
+									img
+										width 100%
+										height 100%
+										object-fit cover
+							.right
+								width 100%
+								height auto
+								padding-left 2em
+								text-align left
+								@media only screen and (max-width: 800px) 
+									display none
+								.flex-div
+									display flex
+									width 100%
+									height 100%
+									// align-items center
+									vertical-align middle
+									flex-direction column
+									.top
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.middle
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+									.bottom
+										height 100%
+										text-align left
+										width 60%
+										.sub-content
+											font-size 16px
+											font-weight 400
+											text-align center
+											color $text-color-1
+	.sticky-top
+		background $div-back-color
+		padding .5rem 1rem
+		
+	.banner-sec
+		padding 3em 0
+		background url("../images/banner1.jpg")
+		.banner-div
+			.flex-div
+				display flex
+				width 100%
+				height auto
+				align-items center
+				vertical-align middle
+				.left
+					width 100%
+					.sun-heading
+						font-weight 400
+						color $text-color-1
+						margin 0
+						margin-bottom .5em
+					.main-heading
+						font-weight 600
+						color $text-color-1
+						margin 0
+						margin-bottom 1.5em
+					.sub-content
+						font-size 16px
+						font-weight 300
+						color $text-color-1
+						margin 0
+.product-list-sec
+	padding 3em 0
+	.product-list-div
+		.heading
+			margin-bottom 2em
+			.main-heading
+				font-weight 600
+				color $div-back-color
+		.left-list
+			box-shadow 0px 0px 10px 0px lightgray
+			border-radius 15px
+			background $text-color-1
+			overflow hidden
+			margin auto
+			position relative
+			@media only screen and (max-width: 800px)
+				margin-bottom 2em
+			.nav
+				@media only screen and (max-width: 800px)
+					flex-direction row !important
+					flex-wrap unset
+					list-style none
+					overflow-x auto
+					position relative
+					
+				.nav-link
+					border-bottom 1px solid lightgray
+					padding 1em
+					@media only screen and (max-width: 800px)
+						min-width 33.333%
+						display inline-block
+						padding .5rem 1rem
+					.iconic-div
+						float left
+						.main-img
+							width 100%
+							height 30px
+							overflow hidden
+							margin-bottom .5em
+							img
+								width 100%
+								height 100%
+								object-fit contain
+							.img-w
+								display none
+							.img-b
+								display block
+						.sub-content
+							font-size 12px
+							font-weight 600
+							margin 0px
+				.active
+					border-bottom 1px solid transparent
+					background $div-back-color
+					.iconic-div
+						.main-img
+							.img-b
+								display none
+							.img-w
+								display block
+		.tab-content
+			.tab-pane
+				.product-list
+					.prodict
+						margin-bottom 1.5em
+						&:hover
+							.icon-list
+								display block !important
+							.top-img
+								.main-img
+									img
+										transform scale(1.1)
+						.overall-div
+							display inline-block
+							width 100%
+							position absolute
+							top 0
+							left 0
+							bottom 0
+							right 0
+							z-index 1
+						.top-img
+							width 100%
+							height 300px
+							position relative
+							padding 1.3em
+							background #f4f4f4
+							overflow hidden
+							border-radius 15px
+							margin-bottom 1em
+							.main-img
+								height 100%
+								overflow hidden
+								img
+									width 100%
+									height 100%
+									object-fit contain
+									transition transform .5s
+							.icon-list
+								display block
+								margin auto
+								position absolute 
+								text-align center
+								left 0
+								bottom 12px
+								width 100%
+								z-index 2
+								.list
+									background $text-color-1
+									box-shadow 0px 0px 10px 0px #848484
+									border-radius 5px
+									width fit-content
+									margin auto
+									overflow hidden
+									.search
+										padding .3em .5em
+										font-size 22px
+										display inline-block
+										background $text-color-1
+										float left
+										&:hover
+											background $div-back-color
+											color $text-color-1
+									.wish-list
+										padding .3em .5em
+										font-size 22px
+										display inline-block
+										background $text-color-1
+										float left
+										&:hover
+											background $div-back-color
+											color $text-color-1
+									.cart
+										padding .3em .5em
+										font-size 22px
+										display inline-block
+										background $text-color-1
+										float left
+										&:hover
+											background $div-back-color
+											color $text-color-1
+									.wish-list
+										border-left 1px solid lightgray
+										border-right 1px solid lightgray
+									.wish-active
+										background $div-back-color
+										i
+											color $text-color-1
+							.discount
+								position absolute
+								top 2%
+								right 10%
+								span
+									font-size 12px
+									font-weight 600
+									color $div-back-color 
+						.prodict-dearils
+							.name
+								font-size 14px
+								font-weight 600
+								color $div-back-color
+								margin 0px
+								margin-bottom .2em
+							.stars
+								display inline-block
+								margin-bottom .2em
+								span
+									margin 0px
+									i 
+										font-size 12px
+										margin 0px
+										color $text-color
+							.star-active
+								span
+									margin 0px
+									i 
+										font-size 12px
+										margin 0px
+										color $text-color-2
+								.no-color
+									i
+										color $text-color
+							.amount
+								.canceld-amount
+									margin-right .5em
+									color $text-color 
+									font-size 14px
+									font-weight 500
+									text-decoration line-through
+								.main-amount
+									color $div-back-color
+									font-size 14px
+									font-weight 500
+.exclusive-offer-sec
+	padding 3em 0
+	background $text-color-3
+	.exclusive-offer-div
+		.heading
+			margin-bottom 2em
+			.main-heading
+				font-weight 600
+				color $div-back-color
+		.offer-list
+			.owl-carousel
+				.prodict
+					margin-bottom 1.5em
+					&:hover
+						.icon-list
+							display block !important
+						.top-img
+							.main-img
+								img
+									transform scale(1.1)
+					.overall-div
+						display inline-block
+						width 100%
+						position absolute
+						top 0
+						left 0
+						bottom 0
+						right 0
+						z-index 1
+					.top-img
+						width 250px
+						height 250px
+						margin auto
+						margin-bottom 2em
+						margin-top 1em 
+						position relative
+						padding 2em
+						background $text-color-1
+						overflow hidden
+						border-radius 100%
+						margin-bottom 1em
+						box-shadow 0px 0px 10px 0px lightgrey
+						.main-img
+							height 100%
+							overflow hidden
+							img
+								width 100%
+								height 100%
+								object-fit contain
+								transition transform .5s
+						.icon-list
+							display none
+							margin auto
+							position absolute 
+							text-align center
+							left 0
+							bottom 12px
+							width 100%
+							z-index 2
+							.list
+								background $text-color-1
+								box-shadow 0px 0px 10px 0px #848484
+								border-radius 5px
+								width fit-content
+								margin auto
+								overflow hidden
+								.search
+									padding .3em .5em
+									font-size 22px
+									display inline-block
+									background $text-color-1
+									float left
+									&:hover
+										background $div-back-color
+										color $text-color-1
+								.wish-list
+									padding .3em .5em
+									font-size 22px
+									display inline-block
+									background $text-color-1
+									float left
+									&:hover
+										background $div-back-color
+										color $text-color-1
+								.cart
+									padding .3em .5em
+									font-size 22px
+									display inline-block
+									background $text-color-1
+									float left
+									&:hover
+										background $div-back-color
+										color $text-color-1
+								.wish-list
+									border-left 1px solid lightgray
+									border-right 1px solid lightgray
+								.wish-active
+									background $div-back-color
+									i
+										color $text-color-1
+						.discount
+							position absolute
+							top 2%
+							right 10%
+							span
+								font-size 12px
+								font-weight 600
+								color $div-back-color 
+					.prodict-dearils
+						padding 0px 2em
+						.main-heading
+							font-weight 400
+							color $div-back-color
+							font-size 18px
+						.sub-content
+							font-size 14px
+							font-weight 500
+							color $text-color
+						.btn
+							width auto
+.featured-products
+	position relative
+	padding 3em 0
+	overflow hidden
+	.Backpack-img
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		width 100%
+		height 100%
+		overflow hidden
+		.main-img
+			overflow hidden
+			@media only screen and (max-width: 1200px) 
+				height 100%
+			img
+				width 100%
+				height 100%
+				object-fit cover
+	.content
+		.heading
+			margin-bottom 2em
+			position relative
+			.main-heading
+				font-weight 600
+				color $div-back-color
+		.slider
+			.owl-carousel-1
+				.img-content
+					margin-bottom 2em
+					.top
+						.main-img
+							width 100%
+							height 230px
+							margin-bottom 1.5em
+							border-radius 15px
+							overflow hidden
+							img
+								width 100%
+								height 100%
+								object-fit cover
+					.bottom
+						.main-img
+							width 100%
+							height 230px
+							border-radius 15px
+							overflow hidden
+							img
+								width 100%
+								height 100%
+								object-fit cover
+.popular-brabds-sec
+	padding 3em 0
+	border-bottom 1px solid lightgray
+	.popular-brabds-div
+		.flex-div
+			display flex
+			width 100%
+			height auto
+			vertical-align middle
+			align-items center
+			@media only screen and (max-width: 800px) 
+				flex-direction column
+			.left
+				width 50%
+				height auto
+				@media only screen and (max-width: 800px) 
+					width 100%
+					margin-bottom 2em
+				.popular-conte
+					width 80%
+					@media only screen and (max-width: 800px) 
+						width 100%
+					.heading
+						margin-bottom 2em
+						.main-heading
+							font-size 50px
+							font-weight 800
+							color $div-back-color 
+							letter-spacing 2px
+							line-height 40px
+							text-transform uppercase
+							margin 0px
+					.sub-content
+						font-size 14px
+						font-weight 500
+						color $text-color
+						margin-bottom .5em
+			.right
+				width 100%
+				height auto
+				.brands
+					.flex-div
+						display flex
+						width 100%
+						height auto
+						.div-1
+							width 100%
+							.main-img
+								width 100%
+								height 100%
+								overflow hidden
+								padding 0 1em
+								@media only screen and (max-width: 800px) 
+									width 50%
+									margin auto
+									margin-bottom 1.5em
+								img
+									width 100%
+									height 100%
+									object-fit cover
+footer
+	padding 3em 0
+	border-bottom 1px solid lightgray
+	.footer-div
+		.main-img
+			width 100%
+			height 500px
+			overflow hidden
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.news
+			@media only screen and (max-width: 800px) 
+				margin-bottom 2em
+				display inline-block
+			.heading
+				margin-bottom 1em
+				.main-heading
+					font-size 14px
+					font-weight 600
+					color $div-back-color
+					margin 0px
+			.list-unstyled
+				li
+					a
+						span
+							font-size 10px
+							padding .5em 1em
+							margin-bottom .5em
+							color $text-color-1
+							background $div-back-color
+							border-radius 5px
+						.sub-content
+							font-size 14px
+							font-weight 400
+							color $text-color
+						.flex-div
+							display flex
+							width 100%
+							height auto
+							vertical-align middle
+							align-items center
+							.icon
+								margin-right .5em
+								background none
+								color $div-back-color
+								font-size 18px
+								padding 0px
+						
+			.insta-img
+				margin-bottom 1em
+				.main-img
+					border-radius 10px
+					overflow hidden
+					height 90px
+					margin-bottom .4em
+					img
+						width 100%
+						height 100%
+						object-fit cover
+			.list-inline
+				.list-inline-item
+					margin-right .2em
+					float left
+					.tag
+						display inline-block
+						padding .5em 1em
+						background $text-color-3
+						border-radius 5px
+						font-size 12px
+						margin-bottom .3em
+.bottom-footer
+	padding 2em 0
+	.bottom-footer-div
+		.flex-div
+			display flex
+			vertical-align middle
+			align-items center
+			@media only screen and (max-width: 800px) 
+				flex-direction column
+			.left
+				width 100%
+				.logo
+					.main-img
+						width 80px
+						height auto
+						overflow hidden
+						img
+							width 100%
+							height 100%
+							object-fit cover
+			.middle
+				width 100%
+				.list-inline
+					.list-inline-item
+						a
+							i
+								font-size 26px
+								color $div-back-color
+						.fb
+							&:hover
+								i
+									color #4867aa
+						.twit
+							&:hover
+								i
+									color #1da1f2
+						.drible
+							&:hover
+								i
+									color #ea4c89
+						.google
+							&:hover
+								i
+									color #e94335
+						.pin
+							&:hover
+								i
+									color #bb081d
+			.right
+				width 70%
+				@media only screen and (max-width: 800px) 
+					width 100%
+				.pay
+					.main-img
+						width 100%
+						height 50px
+						overflow hidden
+						@media only screen and (max-width: 800px) 
+							width 80px
+							margin-bottom .5em
+						img
+							width 100%
+							height 100%
+							object-fit cover
+				
+				
+			
+			
+
+
+
+
+							
+							
+							
